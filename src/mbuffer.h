@@ -14,7 +14,7 @@ int mbuf_init (struct mbuffer *mb);
 /* Free buffer */
 void mbuf_cleanup (struct mbuffer *mb);
 
-/* Grow buffer by certain amount of memory. Returns new size.
+/* Grow buffer by certain amount of memory. Returns new size or 0 if failed to grow.
  * The buffer will not grow if its' size reached a certain limit. */
 int mbuf_grow (struct mbuffer *mb);
 
